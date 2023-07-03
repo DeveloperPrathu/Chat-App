@@ -21,6 +21,7 @@ const fProvider = new FacebookAuthProvider();
 
 import { profileColors } from "@/utils/constants";
 import Loader from "@/components/Loader";
+import Head from "next/head";
 
 const Register = () => {
     const router = useRouter();
@@ -88,6 +89,9 @@ const Register = () => {
         <Loader />
     ) : (
         <div className="h-[100vh] flex justify-center items-center bg-c1">
+            <Head>
+                <title>Register</title>
+            </Head>
             <div className="flex items-center flex-col">
                 <div className="text-center">
                     <div className="text-4xl font-bold">Create New Account</div>

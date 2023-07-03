@@ -21,6 +21,7 @@ const fProvider = new FacebookAuthProvider();
 import ToastMessage from "@/components/ToastMessage";
 import { toast } from "react-toastify";
 import Loader from "@/components/Loader";
+import Head from "next/head";
 
 const Login = () => {
     const router = useRouter();
@@ -85,6 +86,9 @@ const Login = () => {
         <Loader />
     ) : (
         <div className="h-[100vh] flex justify-center items-center bg-c1">
+            <Head>
+                <title>Login</title>
+            </Head>
             <ToastMessage />
             <div className="flex items-center flex-col">
                 <div className="text-center">

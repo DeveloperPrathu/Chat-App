@@ -7,6 +7,7 @@ import LeftNav from "@/components/LeftNav";
 import Chats from "@/components/Chats";
 import Chat from "@/components/Chat";
 import { useChatContext } from "@/context/chatContext";
+import Head from "next/head";
 const Home = () => {
     const router = useRouter();
     const { signOut, currentUser, isLoading } = useAuth();
@@ -22,6 +23,9 @@ const Home = () => {
         <Loader />
     ) : (
         <div className="bg-c1 flex h-[100vh]">
+            <Head>
+                <title>Chat App</title>
+            </Head>
             <div className="flex w-full shrink-0">
                 <LeftNav />
 
