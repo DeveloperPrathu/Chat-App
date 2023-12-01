@@ -25,6 +25,7 @@ const Home = () => {
         <div className="bg-c1 flex h-[100vh]">
             <Head>
                 <title>Chat App</title>
+                <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin-allow-popups" />
             </Head>
             <div className="flex w-full shrink-0">
                 <LeftNav />
